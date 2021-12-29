@@ -9,13 +9,17 @@ const rotateArrow = function(elem) {
     arrow.classList.toggle('rotate-arrow');
 }
 
-const changeSpoiler = function(spoilerClass) {
-    let spoiler = document.querySelector(spoilerClass);
-    if (spoiler.textContent === 'Показать все') {
-        spoiler.textContent = 'Скрыть';
+
+const openSpoilerAndRotate = function(element, openClass, button) {
+    let text = button.querySelector('span');
+    element.classList.toggle(openClass);
+
+    if (text.textContent === 'Показать все') {
+        text.textContent = 'Скрыть';
     } else {
-        spoiler.textContent = 'Показать все';
+        text.textContent = 'Показать все';
     }
+    rotateArrow(button);
 };
 
 mainSpoilerBtn.addEventListener('click', () => {
@@ -26,15 +30,11 @@ mainSpoilerBtn.addEventListener('click', () => {
 
 allSpoilers.forEach(elem => {
     elem.addEventListener('click', () => {
-        console.log(elem);
+        const openClass = 'open-spoiler';
         if (elem.parentNode.classList.contains('brands')) {
-            brandsSwiper.classList.toggle('open-spoiler');
-            changeSpoiler('.spoiler-text--brands');
-            rotateArrow(elem);
+            openSpoilerAndRotate(brandsSwiper, openClass, elem);
         } else if (elem.parentNode.classList.contains('repair')) {
-            repairSwiper.classList.toggle('open-spoiler');
-            changeSpoiler('.spoiler-text--repair');
-            rotateArrow(elem);
+            openSpoilerAndRotate(repairSwiper, openClass, elem);
         }
     });
   });

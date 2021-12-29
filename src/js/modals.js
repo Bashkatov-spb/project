@@ -1,27 +1,25 @@
 const buttonModalCall = document.querySelectorAll('.btn-call');
 const buttonModalMessage = document.querySelectorAll('.btn-msg');
-const menu = document.querySelector('.menu');
 const modalCall = document.querySelector('.modal-call');
 const modalMessage = document.querySelector('.modal-msg');
-const containers = document.querySelectorAll('.container');
 const modalMsgWrapper = document.querySelector('.modal-msg__wrapper');
 
 const closaModalWindow = function(modalWindow, modalClassShow) {
     document.addEventListener('keydown', (e) => {
-        if (e.keyCode == 27) {
+        if (e.keyCode === 27) {
             modalWindow.classList.remove(modalClassShow);
         }
     });
 };
 
 modalMessage.addEventListener('click', (e) => {
-    if (e.target == modalMessage) {
+    if (e.target === modalMessage) {
         modalMessage.classList.remove('modal-msg--show');
     }
 });
 
 modalCall.addEventListener('click', (e) => {
-    if (e.target == modalCall) {
+    if (e.target === modalCall) {
         modalCall.classList.remove('modal-call--show');
     }
 });
