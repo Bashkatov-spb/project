@@ -5,13 +5,18 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   // Входной файл
-  entry: [
-    './src/js/index.js'
-  ],
+  entry: {
+    main: './src/js/index.js',
+    swipers: './src/js/swipers.js',
+    spoilers: './src/js/spoilers.js',
+    menu: './src/js/menu.js',
+    modals: './src/js/modals.js'
+  },
 
   // Выходной файл
   output: {
-    filename: './js/bundle.js'
+    filename: './js/[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
 
   // Source maps для удобства отладки
@@ -35,6 +40,7 @@ module.exports = {
       // Компилируем SCSS в CSS
       {
         test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/scss'),
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS

@@ -1,0 +1,61 @@
+/* Header */
+.header {
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 16px;
+    }
+    &__stick-left {
+        display: none;
+    }
+    &__stick-right {
+        margin-right: 20px;
+    }
+    &__logo {
+        margin-left: 17px;
+        position: relative;
+    }
+    &__new-buttons {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__new-buttons .button:nth-child(3) {
+        display: none;
+        margin-right: 20px;
+    }
+    &__new-buttons .button:nth-child(1),
+    &__new-buttons .button:nth-child(2) {
+        margin-right: 15px;
+        display: none;
+    }
+    &__container .button:nth-child(7) {
+        margin-left: 16px;
+    }
+}
+
+.button {
+    display: flex;
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+    &--vibration:hover {
+        animation: 0.1s vibration ease-out infinite;
+    }
+    &--rotate:hover {
+        animation: 1s rotate linear infinite;
+    }
+    &--scale:hover {
+        animation: 0.5s scale linear infinite;
+    }
+  }
+  
+
+  

@@ -1,0 +1,24 @@
+.about {
+    background-color: #F8F8F8;
+    &__nds-wrapper {
+        font-size: 14px;
+        padding: 16px;
+        font-family: 'TT Lakes Regular';
+    }
+    &__commercial-btn {
+        padding: 0;
+        margin-top: 16px;
+        border: none;
+        background-color: inherit;
+        font-family: 'TT Lakes Medium';
+        font-size: 16px;
+        text-align: start;
+    }
+    &__commercial-btn:hover {
+        cursor: pointer;
+    }
+    &__commercial-btn img {
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+}

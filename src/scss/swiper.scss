@@ -1,0 +1,21 @@
+.swiper {
+  &-pagination {
+    bottom: 10px;
+  }
+  &-wrapper {
+    height: auto;
+  }
+  &-slide {
+    margin-top: 16px;
+  }
+  &-link {
+    
+  }
+}
+    
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #8b8a8a;
+  margin-right: 10px;
+}
