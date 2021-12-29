@@ -1,21 +1,23 @@
 .about {
-    background-color: #F8F8F8;
+    background-color: $mainBgColor;
     &__nds-wrapper {
+        max-width: 450px;
         font-size: 14px;
         padding: 16px;
-        font-family: 'TT Lakes Regular';
+        font-family: $fontRegular;
     }
     &__commercial-btn {
         padding: 0;
         margin-top: 16px;
         border: none;
         background-color: inherit;
-        font-family: 'TT Lakes Medium';
+        font-family: $fontMedium;
         font-size: 16px;
         text-align: start;
     }
     &__commercial-btn:hover {
         cursor: pointer;
+        filter: drop-shadow(0 0 5px black);
     }
     &__commercial-btn img {
         margin-left: 5px;

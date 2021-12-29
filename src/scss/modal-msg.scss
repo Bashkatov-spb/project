@@ -1,9 +1,6 @@
-
 .modal-msg {
-    margin-left: auto;
-    max-width: 320px;
-    height: auto;
-    box-shadow: -2px 0px 4px 0px #454F7E05, 16px 0px 52px 0px #0E185033;
+    height: 100%;
+    width: 100%;
     display: none; 
     position: absolute;
     right: 0;
@@ -11,6 +8,7 @@
     z-index: 100;
     &--show {
         display: block;
+        background-color: rgba(255, 255, 255, 0.95);
     }
     &__btn {
         border: none;
@@ -21,17 +19,20 @@
         height: 40px;
     }
     &__btn:hover,
-    &__btn-send {
+    &__btn-send:hover {
         cursor: pointer;
     }
     &__wrapper {
+        margin-left: auto;
+        box-shadow: -2px 0px 4px 0px #454F7E05, 16px 0px 52px 0px #0E185033;
         background-color: #FFFFFF;
         padding: 16px;
         position: relative;
-        height: 676px;
+        height: 100%;
+        max-width: 320px;
     }
     &__title {
-        font-family: 'TT Lakes Bold';
+        font-family: $fontBold;
         margin-top: 0;
         padding: 0;
         margin-top: 24px;
@@ -55,12 +56,14 @@
         border-radius: 8px;
         border: 1px solid #EAEAEA;
         resize: none;
+        width: 100%;
     }
     &__message {
         color: #7E7E82;
-        font-family: 'TT Lakes Regular';
+        font-family: $fontRegular;
         font-size: 14px;
         line-height: 16px;
+        margin-top: 16px;
     }
     &__message a {
         color: #FF3E79;
@@ -82,15 +85,11 @@
     }
 }
 
-input, .modal-msg__textarea {
-    padding: 0;
+input {
     margin: 0;
     border: none;
     width: 100%;
     margin-bottom: 16px;
-}
-
-input {
     padding: 16px;
     border-radius: 8px;
     border: 1px solid #EAEAEA;
@@ -98,11 +97,11 @@ input {
 
 input::-moz-placeholder {
     color: #B5B6BC;
-    font-family: 'TT Lakes Regular';
+    font-family: $fontRegular;
 }
 
 textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
     color: #B5B6BC;
-    font-family: 'TT Lakes Regular';
+    font-family: $fontRegular;
 }

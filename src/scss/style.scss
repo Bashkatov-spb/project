@@ -1,3 +1,9 @@
+$mainBgColor:#F8F8F8;
+$fontRegular: 'TT Lakes Regular';
+$fontMedium: 'TT Lakes Medium';
+$fontBold: 'TT Lakes Bold';
+
+
 @import 'fonts';
 @import 'header';
 @import 'main';
@@ -11,6 +17,8 @@
 @import 'modal-call';
 @import 'footer';
 @import 'swiper';
+
+
 
 html {
   box-sizing: border-box;
@@ -47,7 +55,7 @@ p {
     margin: 0;
     padding: 0;
     border: none;
-    font-family: 'TT Lakes Medium';
+    font-family: $fontMedium;
     font-size: 16px;
     background-color: inherit;
     display: none;
@@ -56,6 +64,12 @@ p {
 
 .spoiler-btn:hover {
     cursor: pointer;
+    
+}
+
+.spoiler-btn:hover .spoiler-text--brands,
+.spoiler-btn:hover .spoiler-text--repair, {
+    filter: drop-shadow(0 0 5px black);
 }
 
 .spoiler-arrow {
@@ -211,7 +225,7 @@ p {
 
     .brands {
         &__swiper {
-            height: 190px;
+            height: 195px;
             width: 100%;
             overflow: hidden;
         }
@@ -250,7 +264,7 @@ p {
 
     .repair {
         &__swiper {
-            height: 185px;
+            height: 195px;
         }
         &__title {
             padding-left: 24px;
@@ -330,7 +344,7 @@ p {
             display: flex;
             padding: 16px;
             color: #7E7E82;
-            font-family: 'TT Lakes Regular';
+            font-family: $fontRegular;
             display: flex;
             justify-content: space-between;
         }
@@ -347,6 +361,10 @@ p {
             padding: 0px 24px 24px 24px;
             width: 460px;
         }
+    }
+
+    .about__nds-wrapper {
+        padding-left: 24px;
     }
 
     .footer {
@@ -366,6 +384,31 @@ p {
         &__conf {
             width: 33%;
         }
+    }
+
+    .modal-msg,
+    .modal-call {
+        
+    }
+    .modal-call__btn, 
+    .modal-msg__btn {
+        position: absolute;
+        left: -70px;
+        top: 30px;
+    }
+    .modal-call__title,
+    .modal-msg__title {
+        margin-top: 0;
+    }
+    .modal-msg__title::after,
+    .modal-call__title::after {
+        left: -34px;
+        border-radius: 2px;
+    }
+    .modal-call__wrapper,
+    .modal-msg__wrapper {
+        padding: 32px;
+        max-width: 440px;
     }
 }
 

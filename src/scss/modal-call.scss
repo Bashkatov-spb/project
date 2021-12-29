@@ -1,8 +1,6 @@
 .modal-call {
-    margin-left: auto;
-    max-width: 320px;
-    height: auto;
-    box-shadow: -2px 0px 4px 0px #454F7E05, 16px 0px 52px 0px #0E185033;
+    height: 100%;
+    width: 100%;
     display: none; 
     position: absolute;
     right: 0;
@@ -10,6 +8,7 @@
     z-index: 100;
     &--show {
         display: block;
+        background-color: rgba(255, 255, 255, 0.95);
     }
     &__btn {
         border: none;
@@ -24,20 +23,23 @@
         cursor: pointer;
     }
     &__wrapper {
+        margin-left: auto;
+        box-shadow: -2px 0px 4px 0px #454F7E05, 16px 0px 52px 0px #0E185033;
         background-color: #FFFFFF;
         padding: 16px;
         position: relative;
-        height: 676px;
+        height: 100%;
+        max-width: 320px;
     }
     &__title {
-        font-family: 'TT Lakes Bold';
+        font-family: $fontBold;
         margin-top: 0;
         padding: 0;
         margin-top: 24px;
         margin-bottom: 24px;
         position: relative;
     }
-    &__title::before {
+    &__title::after {
         content: "";
         display: block;
         width: 4px;
@@ -88,5 +90,5 @@ input {
 
 input::-webkit-input-placeholder {
     color: #B5B6BC;
-    font-family: 'TT Lakes Regular';
+    font-family: $fontRegular;
 }

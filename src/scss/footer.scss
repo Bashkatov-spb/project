@@ -1,5 +1,5 @@
 .footer {
-    background-color: #F8F8F8;
+    background-color: $mainBgColor;
     &__wrapper {
         border-top: 1px solid #D9FFF5;
         height: 150px;
@@ -7,7 +7,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         text-align: center;
-        font-family: 'TT Lakes Regular';
+        font-family: $fontRegular;
         font-size: 14px;
         color: #7E7E82;
     }

@@ -1,6 +1,6 @@
 .main {
     border-top: 1px solid #D9FFF5;
-    background-color: #F8F8F8;
+    background-color: $mainBgColor;
     &__title-container {
         position: relative;
         display: flex;
@@ -21,7 +21,7 @@
         border-top-right-radius: 5px;
     }
     &__title {
-        font-family: 'TT Lakes Bold';
+        font-family: $fontBold;
         font-size: 26px;
         margin: 0;
     }
@@ -33,7 +33,7 @@
         display: none;
     }
     &__title-text {
-        font-family: 'TT Lakes Medium';
+        font-family: $fontMedium;
         font-size: 16px;
         align-self: center;
         margin: 0 15px;
@@ -56,12 +56,13 @@
         display: none;
     }
     &__link {
-        font-family: 'TT Lakes Regular';
+        font-family: $fontRegular;
         font-size: 16px;
         padding: 8px 15px;
-        border: 2px solid #F8F8F8;;
-        background-color: #F8F8F8;
+        border: 2px solid $mainBgColor;
+        background-color: $mainBgColor;
         color: #7E7E82;
+        transition: all .2s linear;
     }
     &__link:hover {
         cursor: pointer;
@@ -80,7 +81,7 @@
         justify-content: space-around;
     }
     &__article {
-        font-family: 'TT Lakes Regular';
+        font-family: $fontRegular;
         font-size: 14px;
         padding: 10px 20px 15px 16px;
     }
@@ -99,13 +100,16 @@
         padding: 0;
         background-color: inherit;
         font: inherit;
-        font-family: 'TT Lakes Medium';
+        font-family: $fontMedium;
         font-size: 16px;
         margin-left: 8px;
         margin-top: 16px;
     }
     &__spoiler-btn:hover {
         cursor: pointer;
+    }
+    &__spoiler-btn:hover span {
+        filter: drop-shadow(0 0 5px black);
     }
     &__spoiler-arrow {
         margin-right: 16px;
