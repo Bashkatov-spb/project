@@ -60,5 +60,3 @@ function checkSize() {
 }
 
 checkSize();
-
-console.log('swipers');

@@ -38,5 +38,3 @@ allSpoilers.forEach(elem => {
         }
     });
   });
-
-console.log('spoilers');

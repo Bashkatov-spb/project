@@ -34,5 +34,3 @@ menuItems.forEach(elem => {
     elem.classList.add('menu__item--active');
   });
 });
-
-console.log('Menu');

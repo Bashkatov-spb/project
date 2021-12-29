@@ -58,5 +58,5 @@ buttonModalMessage.forEach(elem => {
     });
 });
 
-console.log('modals');
+
 
